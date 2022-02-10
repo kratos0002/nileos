@@ -112,6 +112,9 @@ img.medium{
 }
 
 .rating span{
-  color:gold;
+  color:goldl;
   margin:0.1rem;
+}
+.rating span:last-child{
+  color: black;
 }
