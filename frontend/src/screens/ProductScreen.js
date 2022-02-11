@@ -1,13 +1,15 @@
 import React from 'react'
 import data from '../data'
 import Rating from '../components/Rating'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
+
 
 export default function ProductScreen(props){
     const params = useParams()
     const {id} = params
     console.log(id)
     const product = data.products.find(x=>x._id===id)
+    console.log(product)
     if(!product){
         return (
         <div>
@@ -16,9 +18,10 @@ export default function ProductScreen(props){
     }
     return(
         <div>
-           <div className="row">
+            <Link to="/">Back to Home</Link>
+           <div className="row top">
                <div className="col-2">
-                   <img className ="large" src={product.image} alt ={product.name}></img>
+                   <img className ="medium" src={product.image} alt ={product.name} />
                </div>
                <div className="col-1">
                    <ul>
@@ -52,7 +55,7 @@ export default function ProductScreen(props){
                             <div>status</div>
                             <div>
                                 {product.countInStock>0? (<span className="success">In Stock</span>):
-                               ( <span className="error">Unavailable</span>)}
+                               ( <span className="danger">Unavailable</span>)}
                             </div>
                         </div>
                         </li>

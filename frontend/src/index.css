@@ -17,6 +17,16 @@ body{
   height: 100%;
 }
 
+ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li{
+  margin-top: 1rem;
+}
+
 .grid-container{
   display:grid;
   grid-template-areas: 
@@ -62,6 +72,26 @@ a:hover{
   color: brown;
 }
 
+button{
+  padding:1rem;
+  border-radius:0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+button.primary{
+  background-color: gold;
+}
+
+button.block{
+  width: 100%;
+}
+
 header a{
   color: white;
   padding: 1rem;
@@ -72,6 +102,14 @@ header a{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.col-1{
+  flex: 1 1 25rem;
+}
+
+.col-2{
+  flex: 2 1 50rem;
 }
 
 a.brand{
@@ -117,4 +155,32 @@ img.medium{
 }
 .rating span:last-child{
   color: black;
+}
+
+.row.top{
+  align-items: flex-start;
+
+}
+
+.success{
+  color:green;
+}
+.danger{
+  color:red;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info{
+  color:blue;
+  background-color: pink;
+}
+
+.alert-danger{
+  color:red;
+  background-color: pink;
 }
