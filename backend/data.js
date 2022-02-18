@@ -1,6 +1,29 @@
+import bcrypt from 'bcryptjs'
+
 const data = {
+
+    users: [
+        {
+        name:'Vishal',
+        email: 'admin@nileos.com',
+        password: bcrypt.hashSync('1234', 8),
+        isAdmin: true
+         },
+
+        {
+            name:'Ananya',
+            email: 'ananya@nileos.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: false
+        },
+
+
+
+],
+
+
     products:[
-        {   _id:'1',
+        {   
             name: 'Three body problem',
             category: 'SciFi',
             image: '../images/p1.jpg',
@@ -11,7 +34,7 @@ const data = {
             numReviews:10,
             description: 'wonderful scifi'
         },
-        {   _id:'2',
+        {   
         name: 'Gardens of the Moon',
         category: 'High Fantasy',
         image: '../images/p2.jpg',
@@ -22,7 +45,7 @@ const data = {
         numReviews:10,
         description: 'wonderful scifi'
         },
-        {   _id:'3',
+        {  
         name: 'Deadhouse Gates',
         category: 'High Fantasy',
         image: '../images/p3.jpg',
@@ -33,7 +56,7 @@ const data = {
         numReviews:10,
         description: 'wonderful scifi'
         },
-        {   _id:'4',
+        {  
         name: 'Memories of Ice',
         category: 'SciFi',
         image: '../images/p4.jpg',
@@ -44,7 +67,7 @@ const data = {
         numReviews:10,
         description: 'wonderful scifi'
         },
-        {   _id:'5',
+        {  
          name: 'House of Chains',
          category: 'SciFi',
          image: '../images/p5.jpg',
@@ -55,7 +78,7 @@ const data = {
          numReviews:10,
          description: 'wonderful scifi'
         },
-        {   _id:'6',
+        {  
         name: 'Dark Forest',
         category: 'SciFi',
         image: '../images/p6.jpg',

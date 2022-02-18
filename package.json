@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/kratos0002/nileos#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.2"
   },
   "devDependencies": {
     "eslint": "^8.8.0",
