@@ -95,6 +95,8 @@ button{
 
 button.primary{
   background-color: gold;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 button.block{
@@ -228,7 +230,7 @@ img.medium{
 
 .form label{
   margin: 1rem 0;
-  display: block;
+
 }
 
 .dropdown{

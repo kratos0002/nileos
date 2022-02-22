@@ -4,6 +4,7 @@ import { BrowserRouter,Link, Route, Routes} from 'react-router-dom'
 import { signout } from './actions/userActions';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen'
+import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import ProductScreen from './screens/ProductScreen'
 import RegisterScreen from './screens/RegistrationScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
@@ -59,6 +60,7 @@ function App() {
     <Route path='/signin' element={<SigninScreen />}></Route>
     <Route path='/register' element={<RegisterScreen />}></Route>
     <Route path='/shipping' element={<ShippingAddressScreen />}></Route>
+    <Route path='/payment' element={<PaymentMethodScreen />}></Route>
     </Routes>
   </main>
   <footer className="row center">
