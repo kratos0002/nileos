@@ -4,7 +4,10 @@ import { BrowserRouter,Link, Route, Routes} from 'react-router-dom'
 import { signout } from './actions/userActions';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen'
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
+import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductScreen'
 import RegisterScreen from './screens/RegistrationScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
@@ -40,6 +43,9 @@ function App() {
             <Link to="#">{userInfo.name}<i className='fa fa-caret down'>
               </i></Link>
               <ul className='dropdown-content'>
+                <li>
+                  <Link to='/orderhistory'>Order History</Link>
+                </li>
                 <Link to="#signout" onClick={signoutHandler}>Sign Out</Link>
               </ul>
             </div>
@@ -61,6 +67,9 @@ function App() {
     <Route path='/register' element={<RegisterScreen />}></Route>
     <Route path='/shipping' element={<ShippingAddressScreen />}></Route>
     <Route path='/payment' element={<PaymentMethodScreen />}></Route>
+    <Route path='/placeorder' element={<PlaceOrderScreen />}></Route>
+    <Route path='/order/:id' element={<OrderScreen />}></Route>
+    <Route path='/orderhistory' element={<OrderHistoryScreen />}></Route>
     </Routes>
   </main>
   <footer className="row center">

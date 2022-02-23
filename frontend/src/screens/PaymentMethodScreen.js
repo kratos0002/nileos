@@ -22,7 +22,7 @@ export default function PaymentMethodScreen(props) {
     const submitHandler=(e)=>{
         e.preventDefault()
         dispatch(savePaymentMethod(paymentMethod))
-        navigate('/placeholder')
+        navigate('/placeorder')
 
 
     }
