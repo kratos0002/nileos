@@ -8,6 +8,7 @@ import MessageBox from '../components/MessageBox'
 export default function OrderHistoryScreen(props) {
     const orderMineList = useSelector(state => state.orderMineList)
     const { loading, error, orders } =  orderMineList
+    console.log(orders)
     const navigate = useNavigate()
     const dispatch = useDispatch()
     useEffect(()=>{
@@ -34,7 +35,8 @@ export default function OrderHistoryScreen(props) {
            <tbody>
                {orders.map((order)=>(
                    <tr key={order._id}>
-                       <td>{order.createdAt.substring(0,10)}</td>
+                       <td>{order._id}</td>
+                       <td>{order.createdAt? order.createdAt.substring(0,10): 'Not Available' }</td>
                        <td>{order.totalPrice}</td>
                        <td>{order.isPaid? order.paidAt.substring(0,10):'No'}</td>
                        <td>{order.isDelivered? order.deliveredAt.substring(0,10):'No'}</td>

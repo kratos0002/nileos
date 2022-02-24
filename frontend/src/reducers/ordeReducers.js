@@ -29,14 +29,14 @@ export const orderDetailsReducer = (state = {loading: true, order: {}}, action)=
     }
 }
 
-export const orderMineListReducer  = (state = {loading:true, orders:[]}, action)=>{
+export const orderMineListReducer  = (state={ orders:[]}, action)=>{
     switch(action.type){
         case ORDER_MINE_LIST_REQUEST:
             return { loading:true}
         case ORDER_MINE_LIST_SUCCESS:
-            return { loading:false, orders: action.payload}    
+            return { loading: false, orders: action.payload}    
         case ORDER_MINE_LIST_FAIL:
-            return { loading:false, error: action.payload}    
+            return { loading: false, error: action.payload}    
         default:
             return state
     }

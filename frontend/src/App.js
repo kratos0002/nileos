@@ -9,6 +9,7 @@ import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductScreen'
+import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegistrationScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -44,14 +45,38 @@ function App() {
               </i></Link>
               <ul className='dropdown-content'>
                 <li>
+                  <Link to ='/profile'>User Profile</Link>
+                </li>
+                <li>
                   <Link to='/orderhistory'>Order History</Link>
                 </li>
                 <Link to="#signout" onClick={signoutHandler}>Sign Out</Link>
               </ul>
             </div>
-              ):
+              ):(
                       <Link to="/signin">SIGN IN</Link>
 
+               ) }
+          {
+            userInfo && userInfo.isAdmin && (
+              <div className='dropdown'>
+              <Link to='#admin'>Admin{' '}<i className='fa fa-caret-down'></i></Link>
+              <ul className='dropdown-content'>
+                <li>
+                  <Link to ='/dashboard'>Dashboard</Link>
+                </li>
+                <li>
+                  <Link to ='/productlist'>Products</Link>
+                </li>
+                <li>
+                  <Link to ='/orderlist'>Orders</Link>
+                </li>
+                <li>
+                  <Link to ='/userlist'>Users</Link>
+                </li>
+              </ul>
+              </div>
+            )
           }
           
       </div>
@@ -70,6 +95,8 @@ function App() {
     <Route path='/placeorder' element={<PlaceOrderScreen />}></Route>
     <Route path='/order/:id' element={<OrderScreen />}></Route>
     <Route path='/orderhistory' element={<OrderHistoryScreen />}></Route>
+    <Route path='/profile' element={<ProfileScreen />}></Route>
+          
     </Routes>
   </main>
   <footer className="row center">

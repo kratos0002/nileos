@@ -37,7 +37,7 @@ export const detailsOrder = (orderId) => async(dispatch, getState)=>{
         
     }catch(error){
         const message = 
-        error.repsonse && error.response.data.message ? error.reposne.data.message : error.message
+        error.repsonse && error.response.data.message ? error.response.data.message : error.message
 
         dispatch({type: ORDER_DETAILS_FAIL, payload: message})
     }
@@ -50,13 +50,12 @@ export const listordermine = () => async(dispatch, getState) =>{
         const { data } = await axios.get('/api/orders/mine',{
         headers: {Authorization: `Bearer ${userInfo.token}`}
         })
-        console.log('vishal')
+
         dispatch({type: ORDER_MINE_LIST_SUCCESS, payload: data})
-        console.log('vishal')
     }
     catch(error){
         const message = 
-        error.repsonse && error.response.data.message ? error.reposne.data.message : error.message
+        error.repsonse && error.response.data.message ? error.response.data.message : error.message
         dispatch({type: ORDER_MINE_LIST_FAIL, payload: message})
     }
 }
