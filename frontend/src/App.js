@@ -4,10 +4,12 @@ import { BrowserRouter,Link, Route, Routes} from 'react-router-dom'
 import { signout } from './actions/userActions';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen'
+import MusicScreen from './screens/MusicScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import PreHomeScreen from './screens/PreHomeScreen';
 import ProductScreen from './screens/ProductScreen'
 import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegistrationScreen';
@@ -96,6 +98,9 @@ function App() {
     <Route path='/order/:id' element={<OrderScreen />}></Route>
     <Route path='/orderhistory' element={<OrderHistoryScreen />}></Route>
     <Route path='/profile' element={<ProfileScreen />}></Route>
+    <Route path='/prehome' element={<PreHomeScreen />}></Route>
+    {/* <Route path='/books' element={<HomeScreen />}></Route>
+    <Route path='/music' element={<MusicScreen />}></Route> */}
           
     </Routes>
   </main>

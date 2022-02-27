@@ -89,6 +89,17 @@ const data = {
         numReviews:10,
         description: 'wonderful scifi'
        },
+       {  
+        name: 'Game of Thrones',
+        category: 'Fantasy',
+        image: '../images/p7.jpg',
+        price: 500,
+        countInStock:19,
+        author: 'George R.R Marting',
+        rating: 4.5,
+        numReviews:10,
+        description: 'Immersive'
+       },
     ]
 
 }
